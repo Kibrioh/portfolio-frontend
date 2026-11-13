@@ -25,4 +25,4 @@ dist-ssr
 
 # Local Flask configuration and content
 ../backend/.env
-../backend/data/
+
