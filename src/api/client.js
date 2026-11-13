@@ -1,4 +1,7 @@
-const API_BASE = import.meta.env.VITE_API_URL || ''
+const API_BASE = (
+  import.meta.env.VITE_API_URL ||
+  (import.meta.env.PROD ? 'https://portfolio-backend-jnwi.onrender.com' : '')
+).replace(/\/$/, '')
 export const RESUME_URL = `${API_BASE.replace(/\/$/, '')}/api/resume`
 
 export async function request(path, options = {}, token) {
