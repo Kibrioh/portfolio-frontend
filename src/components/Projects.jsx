@@ -44,7 +44,7 @@ export function ProjectScreenshot({ project, step, stepIndex = 0, variant = 'das
           {variant === 'chart' && <svg viewBox="0 0 640 190" preserveAspectRatio="none" aria-hidden="true"><rect width="640" height="190" fill="#f5f7f5"/><path d="M46 18v142h564M46 125h564M46 87h564M46 49h564" stroke="#d8dfda" strokeWidth="1"/><g fill="#4d91bd">{bars.map((height, index) => <rect key={index} x={83 + index * 62} y={158 - height * 1.65} width="28" height={height * 1.65} rx="3" opacity={index === 5 ? 1 : .72}/>)}</g><path d="M80 119c36-8 47-35 78-28s39 31 69 8 47-20 75-9 42-15 72-11 44 15 71-3 43-13 68-29" fill="none" stroke="#19a77b" strokeWidth="4" strokeLinecap="round"/><g fill="#19a77b">{[80,158,227,302,374,445,518,590].map((x, index) => <circle key={x} cx={x} cy={[119,91,99,90,78,93,68,47][index]} r="4"/>)}</g></svg>}
           {variant === 'table' && <div className="mock-data-table"><div className="mock-table-head"><span>NAME</span><span>LOCATION</span><span>STATUS</span><span>UPDATED</span></div>{Array.from({ length: 5 }, (_, index) => <div className="mock-table-row" key={index}><span><i />{['North Sector', 'Central Zone', 'Riverside', 'East District', 'West Point'][(index + stepIndex) % 5]}</span><span>{['Nairobi', 'Kiambu', 'Machakos', 'Kisumu', 'Nakuru'][(index + seed % 5) % 5]}</span><span><b>{index % 3 === 0 ? 'Active' : 'Reviewed'}</b></span><span>{`${(index + 2).toString().padStart(2, '0')} min ago`}</span></div>)}</div>}
           {variant === 'dashboard' && <div className="mock-dashboard-layout"><div className="mock-mini-map"><svg viewBox="0 0 400 170" preserveAspectRatio="none" aria-hidden="true"><rect width="400" height="170" fill="#e7efeb"/><path d="m0 120 50-40 47 20 54-57 43 25 51-35 57 37 44-20 54 26v94H0Z" fill="#cbded0"/><path d="M24 153 83 86l63 26 73-55 53 34 87-59" fill="none" stroke="#669eae" strokeWidth="4"/><g fill="#12847c" stroke="white" strokeWidth="3"><circle cx="83" cy="86" r="7"/><circle cx="219" cy="57" r="7"/><circle cx="272" cy="91" r="7"/><circle cx="359" cy="32" r="7"/></g></svg></div><div className="mock-dashboard-side"><small>ACTIVITY TREND</small><svg viewBox="0 0 180 90" preserveAspectRatio="none" aria-hidden="true"><path d="M5 74 32 58 54 64 78 36 102 47 128 24 151 30 176 9" fill="none" stroke="#168e79" strokeWidth="4"/><path d="M5 74 32 58 54 64 78 36 102 47 128 24 151 30 176 9v80H5Z" fill="#d9ece5"/></svg></div></div>}
-          <span className="mock-preview-stamp">ILLUSTRATIVE PLACEHOLDER</span>
+          <span className="mock-preview-stamp"></span>
         </div>
       </div>
     </div>
@@ -72,7 +72,7 @@ export function Projects({ projects, githubFallback = '', showAll = false, focus
   if (!projects.length && !showAll) return (
     <div className="empty-showcase">
       <div className="empty-orbit"><span /><span /><span /><Code2 size={24} /></div>
-      <div><p className="eyebrow">YOUR NEXT CASE STUDY</p><h3>Good work deserves<br />a place on the map.</h3><p>Project highlights will appear here as the portfolio takes shape.</p></div>
+      <div><p className="eyebrow">CASE STUDY</p><h3>Good work deserves<br />a place on the map.</h3><p>Project highlights not available yet but coming soon.</p></div>
       <a href="/admin" className="text-link">Add a project <ArrowUpRight size={15} /></a>
     </div>
   )
