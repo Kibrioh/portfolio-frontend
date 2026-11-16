@@ -6,7 +6,7 @@ export function Experience({ entries }) {
   return <div className="timeline-column">
     <div className="subsection-heading"><BriefcaseBusiness size={17} /><h3>Experience</h3><span>{String(entries.length).padStart(2, '0')}</span></div>
     {!entries.length ? <div className="timeline-empty"><span className="timeline-empty-dot" /><p>Professional experience will appear here.</p></div> : <div className="timeline">
-      {entries.map((item, index) => <article className="timeline-item" key={item.id}><span className="timeline-marker">0{index + 1}</span><div className="timeline-main"><div className="timeline-top"><span>{item.period}</span></div><h4>{item.role}</h4><p className="timeline-description">{item.description}</p>{item.skills?.length > 0 && <div className="project-stack">{item.skills.map((skill) => <span key={skill}>{skill}</span>)}</div>}</div></article>)}
+      {entries.map((item, index) => <article className="timeline-item" key={item.id}><span className="timeline-marker">0{index + 1}</span><div className="timeline-main"><div className="timeline-top"><span>{item.period}</span></div><h4>{item.role}</h4>{item.company && <div className="timeline-company">{item.company}</div>}<p className="timeline-description">{item.description}</p>{item.skills?.length > 0 && <div className="project-stack">{item.skills.map((skill) => <span key={skill}>{skill}</span>)}</div>}</div></article>)}
     </div>}
   </div>
 }
