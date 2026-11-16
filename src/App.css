@@ -382,13 +382,13 @@
   .section-deck { font-size: 11px; }
 }
 .header-brand { flex-direction: row; align-items: center; gap: 10px; }
-.header-brand-logo { display: block; width: 46px; height: 46px; object-fit: contain; flex: 0 0 auto; }
+.header-brand .header-brand-mark { display: grid; place-items: center; width: 46px; height: 46px; flex: 0 0 auto; color: var(--accent-ink); background: var(--accent); font: 600 13px var(--mono); letter-spacing: -.08em; }
 .header-brand-copy { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
 .header-brand .header-brand-name { display: block; color: CanvasText; font: 650 18px/1.1 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: -.015em; }
 .header-brand .header-brand-services { display: block; color: color-mix(in srgb, CanvasText 62%, Canvas); font: 9px/1.25 system-ui, sans-serif; letter-spacing: .015em; }
 @media (max-width: 760px) {
   .header-brand { gap: 6px; min-width: 0; }
-  .header-brand-logo { width: 28px; height: 28px; }
+  .header-brand .header-brand-mark { width: 28px; height: 28px; font-size: 9px; }
   .header-brand .header-brand-name { font-size: 14px; }
   .header-brand .header-brand-services { max-width: 160px; font-size: 7px; line-height: 1.2; letter-spacing: 0; }
 }
@@ -396,7 +396,7 @@
 .project-detail-links { display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap; gap: 8px; }
 .project-detail-links a, .project-detail-links a:has(svg:first-child) { display: inline-flex; flex: 0 0 auto; flex-direction: row; align-items: center; min-height: 30px; padding: 5px 9px; line-height: 1.2; white-space: nowrap; }
 .project-link-placeholder { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 7px; min-height: 30px; padding: 5px 9px; color: color-mix(in srgb, CanvasText 60%, Canvas); background: color-mix(in srgb, CanvasText 5%, Canvas); border-radius: 24px; font-size: 12px; line-height: 1.2; white-space: nowrap; }
-.project-detail-links a[href^="/demo/"] { color: #70419c; background: color-mix(in srgb, #b984ee 15%, Canvas); }
+.project-detail-links .project-app-link { color: #70419c; background: color-mix(in srgb, #b984ee 15%, Canvas); }
 .mock-screenshot { position: relative; display: flex; flex-direction: column; width: 100%; height: 100%; min-height: 0; overflow: hidden; color: #253449; background: #f6f8f8; border: 1px solid #d4dfe1; font-family: system-ui, sans-serif; }
 .mock-screenshot.project-visual { height: 218px; }
 .mock-browser-bar { display: flex; align-items: center; gap: 5px; flex: 0 0 25px; height: 25px; padding: 0 9px; color: #677886; background: #edf1f2; border-bottom: 1px solid #d9e1e2; font-size: 7px; }

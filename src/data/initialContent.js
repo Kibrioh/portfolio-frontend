@@ -25,8 +25,6 @@ export const initialContent = {
     { id: "kplc-distribution-network-cleaning", title: "KPLC Distribution Network Data Cleaning and Connectivity Analysis", category: "Spatial Data Science", description: "Developed geospatial data-cleaning workflows to analyse Kenya Power distribution network datasets and identify potential connectivity issues. Identified meter boxes disconnected from Low Voltage (LV) lines, matched meter boxes to nearby service cables using spatial relationships, and analysed cable endpoints to identify records requiring further review. The workflow supports distribution network data validation, connectivity assessment, and improvement of spatial asset data quality.", stack: ["Python", "ArcGIS Pro", "ArcGIS Utility Network", "GeoPandas", "Pandas", "Shapely", "Spatial Analysis", "GIS Data Validation"], image: "/api/uploads/kplc-distribution-network-cleaning.png", github: "https://github.com/Kibrioh/data-cleaning", demo: "", featured: true },
     { id: "kplc-meter-consumption-analysis", title: "Electricity Meter Consumption Analysis – Uasin Gishu and Elgeyo Marakwet", category: "Spatial Data Science", description: "Developed a data analysis workflow to consolidate monthly electricity meter readings and calculate average customer consumption. Filtered customer records for Uasin Gishu and Elgeyo Marakwet counties and linked customer meter records to their corresponding electricity usage. The analysis supports regional consumption assessment, customer usage monitoring, and data-driven evaluation of electricity distribution patterns.", stack: ["Python", "Pandas", "SQL", "Excel", "ArcGIS Pro", "ArcGIS Utility Network", "Data Cleaning", "Data Analysis", "Spatial Data Management"], image: "/api/uploads/kplc-meter-consumption-analysis.png", github: "https://github.com/Kibrioh/data-cleaning", demo: "", featured: true },
     { id: "kplc-transformer-capacity-assessment", title: "Transformer Capacity Rating and Load Assessment", category: "Spatial Data Science", description: "Developed an analytical workflow to assess electricity transformer loading using customer distribution and consumption data. Summarized customer counts and electricity consumption by substation, then applied transformer capacity thresholds to identify transformers that may require capacity uprating. The analysis supports transformer loading assessment, infrastructure planning, and prioritization of distribution network capacity improvements.", stack: ["Python", "Pandas", "SQL", "ArcGIS Pro", "ArcGIS Utility Network", "PostgreSQL", "Data Analytics", "Spatial Analysis", "Data Visualization"], image: "/api/uploads/kplc-transformer-capacity-assessment.png", github: "https://github.com/Kibrioh/data-cleaning", demo: "", featured: false },
-    { id: 'gis-flood-evacuation-prototype', title: 'GIS Flood Early Warning & Evacuation Mapper (Prototype)', category: 'GIS Software Development', description: 'Prototype GIS application for mapping forecast flood zones against settlements, roads, public facilities, and evacuation shelters. Designed for scenario review and response planning, not as a live warning service.', stack: ['Python', 'PostGIS', 'GeoPandas', 'Leaflet'], image: '', github: '', demo: '', featured: false },
-    { id: 'urban-flood-susceptibility-prototype', title: 'Urban Flood Susceptibility Analysis (Prototype)', category: 'Spatial Data Science', description: 'Spatial analysis concept combining rainfall, elevation, drainage, land cover, and historical flood records into an area-level susceptibility index. Uses synthetic sample data for demonstration and is not an operational forecast.', stack: ['Python', 'GeoPandas', 'Rasterio', 'scikit-learn'], image: '', github: '', demo: '', featured: false },
   ],
   experience: [
     {
@@ -38,7 +36,7 @@ export const initialContent = {
     },
     {
       id: 'gis-consultant-farmlife-health-services',
-      period: 'Part-time — dates not specified in CV',
+      period: 'Part-time',
       role: 'GIS Consultant',
       description: 'Manage spatial project information and support geospatial documentation and data workflows for land-restoration and carbon-credit projects. Use TerraMatch to support the management and organization of geospatial project information and contribute to spatial data workflows for environmental restoration initiatives.',
       skills: ['GIS', 'Geospatial Data Management', 'Spatial Data Analysis', 'TerraMatch', 'Land Restoration Mapping', 'Carbon Credit Project Support', 'Geospatial Documentation', 'Spatial Data Processing', 'Environmental GIS'],
@@ -46,6 +44,10 @@ export const initialContent = {
   ],
   resumeAvailable: false,
   education: [],
-  certifications: [],
+  certifications: [
+    { id: 'esri-mooc-spatial-data-science', title: 'Spatial Data Science', issuer: 'ESRI MOOC', date: '', credentialUrl: '', description: '' },
+    { id: 'esri-mooc-cartography', title: 'Cartography', issuer: 'ESRI MOOC', date: '', credentialUrl: '', description: '' },
+    { id: 'learncafe-arcgis-utility-network', title: 'ArcGIS Utility Network', issuer: 'Learncafe Online Courses', date: '', credentialUrl: '', description: '' },
+  ],
 }
 

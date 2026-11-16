@@ -59,8 +59,10 @@ function FullProjectCard({ project, index, githubFallback }) {
       <div className="project-meta"><span>{projectCategoryLabel(project.category)}</span>{project.featured && <span className="featured-tag"><Sparkles size={11} /> FEATURED</span>}</div>
       <h3>{project.title}</h3>
       <div className="project-detail-group"><p className="eyebrow">PROJECT LINKS</p><div className="project-links project-detail-links">
-        {githubHref ? <a href={githubHref} target="_blank" rel="noreferrer"><GithubMark size={16} /> {project.github ? 'GitHub' : 'GitHub profile'} <ArrowRight size={14} /></a> : <span className="project-link-placeholder"><GithubMark size={16} /> GitHub link coming soon</span>}
-        <a href={`/demo/${encodeURIComponent(project.id)}`}>Live demo <ArrowUpRight size={14} /></a>
+        {project.demo ? <>
+          {githubHref ? <a href={githubHref} target="_blank" rel="noreferrer"><GithubMark size={16} /> {project.github ? 'GitHub' : 'GitHub profile'} <ArrowRight size={14} /></a> : <span className="project-link-placeholder"><GithubMark size={16} /> GitHub link coming soon</span>}
+          <a className="project-app-link" href={project.demo} target="_blank" rel="noreferrer">Live demo <ArrowUpRight size={14} /></a>
+        </> : githubHref ? <a className="project-app-link" href={githubHref} target="_blank" rel="noreferrer" title="No live application URL is listed. Check GitHub instead."><GithubMark size={16} /> {project.github ? 'Check GitHub instead' : 'Check GitHub profile instead'} <ArrowUpRight size={14} /></a> : <span className="project-link-placeholder"><GithubMark size={16} /> No live application or GitHub URL provided</span>}
       </div></div>
       <div className="project-detail-group"><p className="eyebrow">SKILLS</p><div className="project-stack">{(project.stack || []).map((tag) => <span key={tag}>{tag}</span>)}</div></div>
       {project.description && <div className="project-detail-group"><p className="eyebrow">ABOUT THIS PROJECT</p><p className="project-description">{project.description}</p></div>}
